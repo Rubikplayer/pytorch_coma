@@ -6,8 +6,16 @@ Please follow the licensing rights of the authors if you use the code.
 This code is tested on Pytorch versoin 1.3. Requirments can be install by running
 
       pip install -r requirements.txt
-    
+
+Note: some of the torch-* libraries might cause pytorch version issue or link issue.
+Try to install by wheels (and use pytorch 1.4) as in:
+    ```
+    # https://github.com/rusty1s/pytorch_sparse/issues/49#issuecomment-602180340
+    pip install torch-cluster==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
+    ```
+
 Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh). Note that the python3 version of mesh package library is needed for this.
+
 
 ## Train
 To start the training, follow these steps
